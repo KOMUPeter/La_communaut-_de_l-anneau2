@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&family=Open+Sans:wght@400;700&display=swap");
+/* ************* css general************* 
+*******************************************/
+:root {
+  --mainColor: rgb(79, 17, 34);
+}
+h1 {
+  font-family: "Cormorant Unicase" sans-serif;
+  text-transform: uppercase;
+}
+body {
+  font-family: "Open Sans" sans-serif;
+}
+.container {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ************* general css******** */
+
+/* *************header************** */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.079)),
+    url(../img/perso.jpeg);
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 80px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cormorant Unicase", serif;
+  gap: 20px;
+}
+header nav:hover {
+  color: bisque;
+}
+header nav img {
+  height: 80px;
+}
+header div {
+  margin-top: 50px;
+  margin: 80px;
+}
+/* *************end of header************** */
+/* ************* #adventure************** */
+#adventure {
+  counter-reset: perso-counter;
+}
+#adventure:nth-child(1) {
+  text-align: center;
+  padding: 10px;
+}
+#adventure ul {
+  display: flex;
+  text-align: start;
+  margin: 0;
+}
+#adventure ul li {
+  margin: 10px;
+}
+/* *************end of #adventure************** */
+/* ************* #community************** */
+#community {
+  border: 1px solid var(--mainColor);
+  text-align: center;
+  margin-top: 30px;
+  justify-content: center;
+}
+#community ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#community ul li img {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+/* *********end of #community ********** */
+/* ************* #metting*************** */
+#mettings {
+  display: flex;
+  gap: 50px;
+  padding: 50px 0;
+}
+#mettings div {
+  align-items: center;
+}
+#mettings img {
+  max-width: 200px;
+  background-position: center;
+  background-size: cover;
+}
+/* **********end of #mettings ********** */
+/* *********** footer ************ */
+footer {
+  background-image: linear-gradient(
+      to right,
+      rgba(79, 17, 34, 0) 25%,
+      rgba(79, 17, 34, 0.3) 35%,
+      rgba(79, 17, 34, 0) 75%
+    ),
+    url(../img/gandalf.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0px 0;
+  color: white;
+}
+footer div {
+  text-align: center;
+  padding: 100px 0;
+}
+footer div a {
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+footer div a:hover {
+  background-color: burlywood;
+}
+footer section {
+  background-color: var(--mainColor);
+}
+footer section p,
+article {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer article img {
+  max-height: 100px;
+}
+/* *******end of footer ********** */
+/* ******* responsive ********** */
+@media (max-width: 600px) {
+  #adventure ul,
+  #community ul,
+  #mettings {
+    display: block;
+    background-color: beige;
+  }
+  #community ul li img {
+    border-radius: 25px;
+  }
+  #mettings {
+    gap: 50px;
+    padding: 10px;
+    text-align: center;
+  }
+  footer article {
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  footer article img {
+    max-height: 50px;
+  }
+  footer section p {
+    text-align: center;
+  }
+}
